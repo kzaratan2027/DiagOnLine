@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diag-On Line</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Madimi+One&family=Mirza:wght@500&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+   <style> 
+     body{
+        background-image: url(https://wallpapercave.com/wp/wp2632423.jpg);
+        background-size: cover;
+    }
+    .lemao{
+        width: 100%; 
+        object-fit: cover;
+        height: 750px;
+    }
+    h2 {
+        text-align: center;
+    }
+    .card-img-top {
+        height: 350px;
+        width: 100%; 
+        object-fit: cover;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    h1, h2, h3, h5, h6 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: green;
+        font-size: 40px;
+        text-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff;
+    }
+    .btn {
+        background-color: #000000;
+    }
+
+    .btn:active, .btn:hover {
+        background-color: green;
+    }
+
+    .text-muted {
+    color: white !important;
+    }
+
+    </style>
+</head>
+<body class="container-fluid">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="hogwartssss.webp" class="d-block w-100 lemao" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Hogwarts School of Witchcraft and Wizardry</h5>
+              <p>Where our artifacts are mostly sourced from</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="war.webp" class="d-block w-100 lemao" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>The Second Wizarding War</h5>
+              <p>The culprit of the Homo sapien magnificus mass extinction</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="diagonalley.jpg" class="d-block w-100 lemao" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Diagon Alley</h5>
+              <p>Where our physical store is located</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <nav class="navbar sticky-top navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" height="45" class="d-inline-block align-top mx-auto d-block" alt="logo">
+            </a>
+        </div>
+    </nav>
+    <div class="row justify-content-center m-5">
+        <h2>WANDS</h2>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="HermioneWand.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">H. Granger</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">1850</p>
+            <div class="card-footer">
+                <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        </div>
+    </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="RonWand.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">R. Weasley</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">1700</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="HarryWand.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">H. Potter</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">1900</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="DracoWand.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">D. Malfoy</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">1000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="SnapeWand.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">S. Snape</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">1200</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="ElderWand.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">The Elder Wand</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">2000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center m-5">
+        <h2>BOOKS</h2>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="book1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Quidditch Through the Ages</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">2150</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="book2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Gadding with Ghouls</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">3000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="book3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">1000 Magical Herbs and Fungi</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">1100</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="book4.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">A History of Magic</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">2200</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="book5.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Magical Drafts and Potions</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">2000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="book6.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">A Guide to Transfiguration</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">1230</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center m-5">
+        <h2>QUIDDITCH ITEMS</h2>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="snitch.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Golden Snitch</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">2250</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="quaffle.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Quaffle</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">2500</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="kit.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Quidditch Starter Kit</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">15000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="broomm1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Broomstick (Nimbus 2000)</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">7000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="broomm2.png" class="card-img-top" alt="...">
+            <div class="card-body categoryitem">
+            <h5 class="card-title">Broomstick (Nimbus 2001)</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">10000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="broom3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Broomstick (Firebolt)</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">12000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center m-5">
+        <h2>MISCELLANEOUS ITEMS</h2>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="cloak.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Cloak of Invisibility</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">45000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="hat.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Sorting Hat</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">25000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="time.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Time Turner</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">192000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="stone.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Ressurection Stone</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">150000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="feather.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Phoenix Feather</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">5000</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-12 m-1">
+            <img src="luna.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title categoryitem">Spectrespecs</h5>
+            <div class="d-flex flex-row">
+                <p>Price:&nbsp;</p>
+                <p class="expensive">1200</p>
+            </div>
+            <a href="#" onclick="addlemao(this.parentElement.querySelector('.categoryitem'), this.parentElement.querySelector('.expensive'))" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center m-5">
+            <div class="col-lg-3 col-md-3 col-sm-12 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Cart</h2>
+                        <ul id="cartitems" class="list-group">
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex flex-row p-2">
+                            <p>Total:&nbsp;</p>
+                            <p id="totalMoney">0&nbsp;</p>
+                            <p>ʛ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 m-2">
+                <div class="card">
+                    <form id="frform" action="http://sirjm.infinityfreeapp.com/checkout.php" method="get">
+                        <div class="card-body">
+                            <p>Name:</p>
+                            <input type="text" name="cust_name" id="nam" class="form-control" placeholder="What's your name?">
+                            <p>Email:</p>
+                            <input type="email" name="cust_email" id="ema" class="form-control" placeholder="What's your email">
+                            <p>Delivery Address:</p>
+                            <input type="text" name="cust_addr" id="add" class="form-control" placeholder="What's your address?">
+                            <input type="hidden" name="cust_order" id="cust_order">
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" onclick="placeorder()">Place Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-muted">&copy; 2024 Diag-On Line, Inc</p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+          </a>
+      
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="devpage.html" class="nav-link px-2 text-muted">Developer's Page</a></li>
+          </ul>
+        </footer>
+    </div>
+
+
+    <script> 
+    var cartstuff = []; 
+
+    function addlemao(categoryItemElem, expensiveElem) {
+        var catit = categoryItemElem.innerHTML;
+        var pricee =  parseFloat(expensiveElem.innerHTML.replace(/[^\d.-]/g, '')); 
+
+        const cust_order = {
+            prod_order: catit,
+            prod_price: pricee
+        };
+        
+        cartstuff.push(cust_order);
+        displaystuff(); 
+        savestuff(); 
+    }
+
+    function savestuff() {
+        localStorage.setItem("cartstuff",JSON.stringify(cartstuff));
+    }
+
+    function removeitem(index) {
+        cartstuff.splice(index, 1); 
+        displaystuff();
+        savestuff();
+    }
+
+    function displaystuff() {
+        document.getElementById('cartitems').innerHTML = '';
+        var total = 0;
+        for(var i=0; i<cartstuff.length; i++) {
+            document.getElementById('cartitems').innerHTML += '<li class="list-group-item" onclick="removeitem(' + i + ')"><h4 class="mb-0">' + cartstuff[i].prod_order + '</h4><p class="mb-0 small">' +  cartstuff[i].prod_price + '</p></li>' + '</h4><p class="mb-0 small">' + '</p><button type="button" class="btn btn-danger btn-sm" onclick="removeitem(' + i + ')">Remove</button></li>' + '</p></li>';
+            total += parseFloat(cartstuff[i].prod_price);
+        }
+        document.getElementById('totalMoney').innerText = total.toFixed(2); 
+    }
+
+    function yas() {
+        if(localStorage.getItem("cartstuff") != null) {
+            cartstuff = JSON.parse(localStorage.getItem("cartstuff"));
+        }
+        displaystuff();
+    }
+    yas();
+    
+    function getitems() {
+        var items = [];
+        for (var i = 0; i < cartstuff.length; i++) {
+            items.push({ prod_name: cartstuff[i].prod_order, prod_price: parseFloat(cartstuff[i].prod_price.toFixed(2)) });
+        }
+        return items;
+    }
+
+    function placeorder() {
+        var inpitems = document.getElementById('cust_order');
+        var temstems = getitems();
+        inpitems.value = JSON.stringify(temstems);
+        document.querySelector("form").submit();
+    }
+ 
+
+
+    </script>
+</body>
+</html>
